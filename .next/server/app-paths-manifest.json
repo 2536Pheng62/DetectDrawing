@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/approval/page": "app/admin/approval/page.js",
+  "/api/parse-ifc/route": "app/api/parse-ifc/route.js",
+  "/api/validate-rules/route": "app/api/validate-rules/route.js",
+  "/arc/check/page": "app/arc/check/page.js",
+  "/arc/foundation/dashboard/page": "app/arc/foundation/dashboard/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/page": "app/page.js",
+  "/reports/[id]/page": "app/reports/[id]/page.js",
+  "/reports/monthly/[projectId]/[year]/[month]/page": "app/reports/monthly/[projectId]/[year]/[month]/page.js",
+  "/reports/monthly/[projectId]/page": "app/reports/monthly/[projectId]/page.js",
+  "/reports/new/page": "app/reports/new/page.js",
+  "/reports/project/[projectId]/page": "app/reports/project/[projectId]/page.js"
+}

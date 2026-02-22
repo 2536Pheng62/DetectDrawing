@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_not-found/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__13087610._.js")
+R.c("server/chunks/ssr/bc3d4_next_dist_a9f1a63f._.js")
+R.c("server/chunks/ssr/bc3d4_next_dist_esm_build_templates_app-page_5014aebb.js")
+R.c("server/chunks/ssr/[root-of-the-server]__5b44023f._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__41ccd02b._.js")
+R.c("server/chunks/ssr/_565cfb33._.js")
+R.c("server/chunks/ssr/OneDrive_Apps_detctDrawing_src_app_layout_tsx_5cbac05d._.js")
+R.c("server/chunks/ssr/bc3d4_next_dist_client_components_a5557322._.js")
+R.c("server/chunks/ssr/bc3d4_next_dist_client_components_builtin_forbidden_69a990ea.js")
+R.c("server/chunks/ssr/13466_Apps_detctDrawing__next-internal_server_app__not-found_page_actions_56e92239.js")
+R.m(77345)
+module.exports=R.m(77345).exports

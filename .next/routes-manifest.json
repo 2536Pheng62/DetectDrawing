@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/reports/monthly/[projectId]",
+      "regex": "^/reports/monthly/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPprojectId": "nxtPprojectId"
+      },
+      "namedRegex": "^/reports/monthly/(?<nxtPprojectId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/reports/monthly/[projectId]/[year]/[month]",
+      "regex": "^/reports/monthly/([^/]+?)/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPprojectId": "nxtPprojectId",
+        "nxtPyear": "nxtPyear",
+        "nxtPmonth": "nxtPmonth"
+      },
+      "namedRegex": "^/reports/monthly/(?<nxtPprojectId>[^/]+?)/(?<nxtPyear>[^/]+?)/(?<nxtPmonth>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/reports/project/[projectId]",
+      "regex": "^/reports/project/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPprojectId": "nxtPprojectId"
+      },
+      "namedRegex": "^/reports/project/(?<nxtPprojectId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/reports/[id]",
+      "regex": "^/reports/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/reports/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin/approval",
+      "regex": "^/admin/approval(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/approval(?:/)?$"
+    },
+    {
+      "page": "/api/parse-ifc",
+      "regex": "^/api/parse\\-ifc(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/parse\\-ifc(?:/)?$"
+    },
+    {
+      "page": "/api/validate-rules",
+      "regex": "^/api/validate\\-rules(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/validate\\-rules(?:/)?$"
+    },
+    {
+      "page": "/arc/check",
+      "regex": "^/arc/check(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/arc/check(?:/)?$"
+    },
+    {
+      "page": "/arc/foundation/dashboard",
+      "regex": "^/arc/foundation/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/arc/foundation/dashboard(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/reports/new",
+      "regex": "^/reports/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/new(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

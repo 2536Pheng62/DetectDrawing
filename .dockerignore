@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+build
+.env
+.env.local
+.git
+.gitignore
+README.md
+Dockerfile
+docker-compose.yml
+server_logs.txt
+test_output.txt
+backups
+scripts
+C:\Users\pang_\.gemini\antigravity\brain

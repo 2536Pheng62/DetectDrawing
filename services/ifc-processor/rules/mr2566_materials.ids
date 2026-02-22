@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <info>
+    <title>กฎกระทรวงกำหนดวัสดุที่ใช้ในการก่อสร้างอาคาร พ.ศ. 2566</title>
+    <description>ชุดกฎสำหรับการตรวจสอบสมรรถนะด้านความปลอดภัยของวัสดุ (Performance-based Safety)</description>
+  </info>
+  <specifications>
+    <!-- กฎข้อที่ 1: การตรวจสอบดรรชนีการลามไฟของวัสดุตกแต่งภายใน (IfcCovering) -->
+    <specification name="Fire Spread Index Check" ifcVersion="IFC4" description="วัสดุตกแต่งผิวภายในต้องมีดรรชนีการลามไฟ (Fire Spread Index) ไม่เกิน 25">
+      <applicability minOccurs="0" maxOccurs="unbounded">
+        <entity>
+          <name>
+            <simpleValue>IFCCOVERING</simpleValue>
+          </name>
+        </entity>
+      </applicability>
+      <requirements>
+        <property dataType="IFCINTEGER" cardinality="required">
+          <propertySet>
+            <simpleValue>Pset_MaterialFire</simpleValue>
+          </propertySet>
+          <baseName>
+            <simpleValue>FireSpreadIndex</simpleValue>
+          </baseName>
+          <value>
+            <xs:restriction base="xs:integer">
+              <xs:maxInclusive value="25"/>
+            </xs:restriction>
+          </value>
+        </property>
+      </requirements>
+    </specification>
+
+    <!-- กฎข้อที่ 2: การตรวจสอบค่าการสะท้อนแสงของกระจกภายนอก (IfcWindow) -->
+    <specification name="Exterior Glass Reflectance Check" ifcVersion="IFC4" description="กระจกภายนอกอาคารต้องมีค่าการสะท้อนแสง (Light Reflectance) ไม่เกิน 30%">
+      <applicability minOccurs="0" maxOccurs="unbounded">
+        <entity>
+          <name>
+            <simpleValue>IFCWINDOW</simpleValue>
+          </name>
+        </entity>
+      </applicability>
+      <requirements>
+        <property dataType="IFCREAL" cardinality="required">
+          <propertySet>
+            <simpleValue>Pset_WindowCommon</simpleValue>
+          </propertySet>
+          <baseName>
+            <simpleValue>LightReflectance</simpleValue>
+          </baseName>
+          <value>
+            <xs:restriction base="xs:double">
+              <xs:maxInclusive value="30.0"/>
+            </xs:restriction>
+          </value>
+        </property>
+      </requirements>
+    </specification>
+  </specifications>
+</ids>

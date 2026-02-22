@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/approval/page": "/admin/approval",
+  "/api/parse-ifc/route": "/api/parse-ifc",
+  "/api/validate-rules/route": "/api/validate-rules",
+  "/arc/check/page": "/arc/check",
+  "/arc/foundation/dashboard/page": "/arc/foundation/dashboard",
+  "/dashboard/page": "/dashboard",
+  "/page": "/",
+  "/reports/[id]/page": "/reports/[id]",
+  "/reports/monthly/[projectId]/[year]/[month]/page": "/reports/monthly/[projectId]/[year]/[month]",
+  "/reports/monthly/[projectId]/page": "/reports/monthly/[projectId]",
+  "/reports/new/page": "/reports/new",
+  "/reports/project/[projectId]/page": "/reports/project/[projectId]"
+}

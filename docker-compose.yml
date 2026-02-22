@@ -1,0 +1,10 @@
+services:
+  ifc-processor:
+    build: ./services/ifc-processor
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./services/ifc-processor:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+
