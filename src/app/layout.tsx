@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-    title: "Daily Field Report | รายงานควบคุมงานก่อสร้าง",
+    title: "ระบบควบคุมงานก่อสร้าง | DailyReport",
     description: "ระบบบันทึกรายงานประจำวันสำหรับงานวิศวกรรมโยธา พร้อม Smart Carry-Forward",
     manifest: "/manifest.json",
 };
@@ -31,17 +32,13 @@ export default function RootLayout({
                 />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-                <meta name="apple-mobile-web-app-title" content="DailyReport" />
+                <meta name="apple-mobile-web-app-title" content="SiteControl" />
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
                         if ('serviceWorker' in navigator) {
                             window.addEventListener('load', function() {
-                                navigator.serviceWorker.register('/sw.js').then(function(reg) {
-                                    console.log('ServiceWorker registration successful');
-                                }, function(err) {
-                                    console.log('ServiceWorker registration failed: ', err);
-                                });
+                                navigator.serviceWorker.register('/sw.js');
                             });
                         }
                         `,
@@ -49,7 +46,8 @@ export default function RootLayout({
                 />
             </head>
             <body className="min-h-screen bg-gray-50" suppressHydrationWarning>
-                <main className="max-w-md mx-auto pb-20">
+                <Navbar />
+                <main className="min-h-[calc(100vh-3.5rem)]">
                     {children}
                 </main>
             </body>

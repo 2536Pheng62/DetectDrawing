@@ -4,6 +4,7 @@ export async function POST(request: Request) {
     try {
         const formData = await request.formData();
         const file = formData.get('file') as File;
+        const idsFile = formData.get('ids_file') as File | null;
 
         if (!file) {
             return NextResponse.json({ error: 'No file provided' }, { status: 400 });
@@ -14,6 +15,9 @@ export async function POST(request: Request) {
         
         const pythonFormData = new FormData();
         pythonFormData.append('file', file);
+        if (idsFile) {
+            pythonFormData.append('ids_file', idsFile);
+        }
 
         const response = await fetch(`${ifcProcessorUrl}/validate-rules`, {
             method: 'POST',
@@ -27,20 +31,15 @@ export async function POST(request: Request) {
 
         const data = await response.json();
         
-        // Transform the data to match the frontend expectations
-        const validationResults = data.validation_results || {};
-        const transformedData = {
-            status: validationResults.status ?? false,
-            passed_requirements: validationResults.total_requirements_pass ?? 0,
-            failed_requirements: validationResults.total_requirements_fail ?? 0,
-            details: validationResults.specifications?.map((spec: any) => ({
-                name: spec.name || 'Unnamed Specification',
-                description: spec.description || '',
-                status: spec.status ?? false,
-            })) || []
-        };
-
-        return NextResponse.json(transformedData);
+        // v2: Python now returns structured response directly
+        return NextResponse.json({
+            status:               data.status ?? false,
+            project_name:         data.project_name ?? 'Unknown',
+            ids_file_used:        data.ids_file_used ?? '',
+            passed_requirements:  data.passed_requirements ?? 0,
+            failed_requirements:  data.failed_requirements ?? 0,
+            details:              data.details ?? [],
+        });
 
     } catch (error: any) {
         console.error('Error validating IFC rules:', error);

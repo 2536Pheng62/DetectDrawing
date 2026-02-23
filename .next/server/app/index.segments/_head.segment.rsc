@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[25122,["/_next/static/chunks/e818a8eb07d9b3cd.js","/_next/static/chunks/7abd324f292cb106.js"],"ViewportBoundary"]
-3:I[25122,["/_next/static/chunks/e818a8eb07d9b3cd.js","/_next/static/chunks/7abd324f292cb106.js"],"MetadataBoundary"]
-4:"$Sreact.suspense"
-0:{"buildId":"U4_hdv4NO11_eJQ1TAZIg","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","2",{"name":"theme-color","content":"#2563eb"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Daily Field Report | รายงานควบคุมงานก่อสร้าง"}],["$","meta","1",{"name":"description","content":"ระบบบันทึกรายงานประจำวันสำหรับงานวิศวกรรมโยธา พร้อม Smart Carry-Forward"}],["$","link","2",{"rel":"manifest","href":"/manifest.json"}]]}]}]}],null]}],"loading":null,"isPartial":false}

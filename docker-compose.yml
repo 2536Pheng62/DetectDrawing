@@ -8,3 +8,39 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
 
+  # ─────────────────────────────────────────────────────────────────────
+  # OpenSees Engine – Seismic Dynamic Analysis (มยผ. 1302-52)
+  # POST http://opensees-engine:8000/analyze-seismic
+  # ─────────────────────────────────────────────────────────────────────
+  opensees-engine:
+    build: ./services/opensees-engine
+    ports:
+      - "8002:8000"
+    volumes:
+      - ./services/opensees-engine:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    # OpenSeesPy can be memory-hungry for large models (increase if needed)
+    mem_limit: 1g
+
+  # ─────────────────────────────────────────────────────────────────────
+  # PDF Analyzer – 2D Floor Plan Analysis (กฎหมายควบคุมอาคาร)
+  # Modules: PyMuPDF (vector) + OpenCV (raster) + Tesseract OCR + YOLO
+  # POST http://pdf-analyzer:8000/parse-pdf
+  # POST http://pdf-analyzer:8000/extract-vectors
+  # POST http://pdf-analyzer:8000/detect-symbols
+  # ─────────────────────────────────────────────────────────────────────
+  pdf-analyzer:
+    build: ./services/pdf-analyzer
+    ports:
+      - "8003:8000"
+    volumes:
+      - ./services/pdf-analyzer:/app
+      # Mount optional YOLO model weights (place .pt file here)
+      - ./services/pdf-analyzer/models:/app/models:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - SYMBOL_MODEL_PATH=/app/models/floorplan_symbols.pt
+      - SYMBOL_CONF_THRESHOLD=0.40
+    mem_limit: 2g
+

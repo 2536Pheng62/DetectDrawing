@@ -1,0 +1,23 @@
+node_modules
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# YOLO / ML model weights (large binary files)
+*.pt
+*.pth
+*.onnx
+*.weights
+services/pdf-analyzer/models/*.pt
+
+# Build outputs
+.next/
+out/
+
+# Environment
+.env.local
+.env.*.local

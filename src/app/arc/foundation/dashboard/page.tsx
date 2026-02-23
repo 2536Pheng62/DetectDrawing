@@ -77,7 +77,7 @@ export default function FoundationDashboard() {
             {/* Header */}
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <Link href="/dashboard" className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <Link href="/arc" className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                         <ArrowLeft size={20} className="text-gray-600" />
                     </Link>
                     <div>

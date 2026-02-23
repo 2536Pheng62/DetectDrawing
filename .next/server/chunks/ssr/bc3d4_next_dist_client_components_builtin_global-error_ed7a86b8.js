@@ -1,3 +1,0 @@
-module.exports=[94629,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(69016);a.n(d("[project]/OneDrive/Apps/detctDrawing/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},47674,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(69016);a.n(d("[project]/OneDrive/Apps/detctDrawing/node_modules/next/dist/client/components/builtin/global-error.js"))},18767,a=>{"use strict";a.i(94629);var b=a.i(47674);a.n(b)}];
-
-//# sourceMappingURL=bc3d4_next_dist_client_components_builtin_global-error_ed7a86b8.js.map

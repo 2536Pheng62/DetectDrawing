@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Upload, File, CheckCircle, XCircle, AlertTriangle, Loader2 } from 'lucide-react';
+import Link from 'next/link';
+import { Upload, File, CheckCircle, XCircle, AlertTriangle, Loader2, ArrowLeft } from 'lucide-react';
 
 interface ValidationResult {
     status: boolean;
@@ -56,7 +57,12 @@ export default function ARCCheckPage() {
 
     return (
         <div className="p-6 max-w-4xl mx-auto">
-            <h1 className="text-2xl font-bold mb-6 text-gray-800">ตรวจสอบแบบแปลนอัตโนมัติ (ARC)</h1>
+            <div className="flex items-center gap-3 mb-6">
+                <Link href="/arc" className="p-2 rounded-full hover:bg-gray-100 text-gray-500 transition-colors">
+                    <ArrowLeft size={20} />
+                </Link>
+                <h1 className="text-xl font-bold text-gray-800">ตรวจสอบ IFC / BIM (IfcTester)</h1>
+            </div>
             
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-8">
                 <h2 className="text-lg font-semibold mb-4 text-gray-700">อัปโหลดไฟล์ IFC</h2>

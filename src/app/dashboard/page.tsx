@@ -90,14 +90,13 @@ export default function DashboardPage() {
         <div className="dashboard">
             {/* Header */}
             <header className="dashboard-header">
-                <h1>📊 แดชบอร์ดภาพรวมโครงการ</h1>
-                <p className="subtitle">กองพัฒนาและบำรุงรักษาอาคารราชพัสดุ</p>
+                <div>
+                    <h1>📊 แดชบอร์ดภาพรวมโครงการ</h1>
+                    <p className="subtitle">กองพัฒนาและบำรุงรักษาอาคารราชพัสดุ</p>
+                </div>
                 <div className="header-actions">
-                    <Link href="/arc/foundation/dashboard" className="arc-btn">
-                        🏗️ ตรวจสอบฐานราก (ARC)
-                    </Link>
-                    <Link href="/arc/check" className="arc-btn" style={{ marginLeft: '10px', backgroundColor: '#8b5cf6' }}>
-                        🔍 ตรวจสอบ BIM (IfcTester)
+                    <Link href="/arc" className="arc-btn">
+                        🏗️ ARC Tools
                     </Link>
                     <button onClick={loadDashboardData} className="refresh-btn">
                         🔄 รีเฟรช
@@ -266,25 +265,28 @@ export default function DashboardPage() {
                     font-family: system-ui, -apple-system, sans-serif;
                 }
                 .dashboard-header {
-                    text-align: center;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 16px;
                     margin-bottom: 32px;
-                    position: relative;
+                    flex-wrap: wrap;
                 }
                 .dashboard-header h1 {
-                    font-size: 28px;
+                    font-size: 24px;
                     color: #1a237e;
                     margin: 0;
                 }
                 .subtitle {
                     color: #666;
-                    margin: 8px 0;
+                    margin: 4px 0 0 0;
+                    font-size: 14px;
                 }
                 .header-actions {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
                     display: flex;
-                    gap: 12px;
+                    gap: 10px;
+                    align-items: center;
+                    flex-shrink: 0;
                 }
                 .refresh-btn {
                     padding: 8px 16px;
